@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
         private const val TAG = "MainActivity"
     }
 
-
     val viewModel : UsersViewModel by lazy {
         UsersViewModel()
     }
@@ -30,7 +29,6 @@ class MainActivity : AppCompatActivity() {
                     Log.d(TAG, "SUCCESS: ${it.data!!.data!!.size}")
                 }
                 ERROR -> {
-
                     Log.d(TAG, "ERROR: ${it.errorMessage}")
                 }
                 LOADING -> {

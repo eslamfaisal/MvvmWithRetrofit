@@ -17,7 +17,6 @@ class UsersViewModel : ViewModel() {
     val listResponse: MutableLiveData<Resource<UsersResponse>> = MutableLiveData()
 
     fun getUserData() {
-
         CoroutineScope(IO).launch {
             setValue(Resource.loading())
 
@@ -30,7 +29,6 @@ class UsersViewModel : ViewModel() {
             }
         }
     }
-
 
     private suspend fun setValue(result: Resource<UsersResponse>) {
         withContext(Main) {
