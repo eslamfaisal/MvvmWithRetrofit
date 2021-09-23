@@ -4,8 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.eslam.mvvmtask.R
+import com.eslam.mvvmtask.model.Status.*
 import com.eslam.mvvmtask.viewmodel.UsersViewModel
-import com.urgent.daddody.api.Status.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewModel.getUserData()
+        viewModel.getUsersData()
 
         viewModel.listResponse.observe(this) {
             when (it.status) {

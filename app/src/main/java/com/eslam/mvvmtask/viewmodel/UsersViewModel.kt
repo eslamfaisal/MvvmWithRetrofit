@@ -2,10 +2,9 @@ package com.eslam.mvvmtask.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.eslam.mvvmtask.model.Resource
 import com.eslam.mvvmtask.model.UsersResponse
 import com.eslam.mvvmtask.networking.RetrofitClient
-import com.urgent.daddody.api.Resource
-import com.urgent.daddody.api.Status
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main
@@ -16,7 +15,7 @@ class UsersViewModel : ViewModel() {
 
     val listResponse: MutableLiveData<Resource<UsersResponse>> = MutableLiveData()
 
-    fun getUserData() {
+    fun getUsersData() {
         CoroutineScope(IO).launch {
             setValue(Resource.loading())
 
