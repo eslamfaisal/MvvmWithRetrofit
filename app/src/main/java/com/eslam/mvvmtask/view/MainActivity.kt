@@ -3,7 +3,6 @@ package com.eslam.mvvmtask.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.lifecycle.Observer
 import com.eslam.mvvmtask.R
 import com.eslam.mvvmtask.viewmodel.UsersViewModel
 import com.urgent.daddody.api.Status.*
